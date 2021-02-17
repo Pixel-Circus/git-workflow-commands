@@ -1,0 +1,15 @@
+#!/bin/bash
+
+BRANCH=$1
+
+if [ ! -z "$1" ]
+then
+  git stash --include-untracked
+  #TODO check between master or main
+  git checkout master
+  git pull origin master
+  git checkout -b $BRANCH
+  git stash pop
+else
+  echo "Please specify branch name"
+fi

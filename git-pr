@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MSG=$1
+
+if [ -z "$1" ]
+  then
+    echo "Please provide a title for the Pull request as a parameter.";exit;
+fi
+
+git push --set-upstream origin $(git branch --show-current)
+
+gh pr create --title "$MSG" --body "" --reviewer "Pixel-Circus/reviewers" --base develop

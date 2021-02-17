@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BRANCH=$1
+
+if [ ! -z "$1" ]
+then
+  git stash --include-untracked
+  git checkout $BRANCH
+  git stash pop
+else
+  echo "Please specify branch name"
+fi
