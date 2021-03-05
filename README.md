@@ -5,6 +5,7 @@ Article sur les commandes Git: https://levelup.gitconnected.com/automate-repetit
 
 1. Checkout du repo dans un dossier sur l'ordinateur
 2. Ajout du path vers le dossier dans le "PATH" des variables d'environnement
+3. Certaines commandes requièrent l'installation de [Github CLI](https://cli.github.com/manual/)
 
 ## Commandes existantes
 
