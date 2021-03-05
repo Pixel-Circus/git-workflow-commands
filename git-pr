@@ -1,12 +1,17 @@
 #!/bin/bash
 
-MSG=$1
+BRANCH=$1
+MSG=$2
 
 if [ -z "$1" ]
+  then
+    echo "Please provide the base branch for the Pull request as a parameter.";exit;
+fi
+if [ -z "$2" ]
   then
     echo "Please provide a title for the Pull request as a parameter.";exit;
 fi
 
 git push --set-upstream origin $(git branch --show-current)
 
-gh pr create --title "$MSG" --body "" --reviewer "Pixel-Circus/reviewers" --base develop
+gh pr create --title "$MSG" --body "" --reviewer "Pixel-Circus/reviewers" --base $BRANCH
