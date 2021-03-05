@@ -1,0 +1,5 @@
+#!/bin/bash
+
+COMMITS=$1
+
+git archive -o update.zip HEAD $(git diff --diff-filter=d --name-only HEAD~$COMMITS)
