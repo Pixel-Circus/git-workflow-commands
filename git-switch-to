@@ -6,6 +6,7 @@ if [ ! -z "$1" ]
 then
   git stash --include-untracked
   git checkout $BRANCH
+  git pull
   git stash pop
 else
   echo "Please specify branch name"
