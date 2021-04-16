@@ -18,6 +18,14 @@ Cette commande crée une Pull request, la merge et supprime la branche originale
 1. BRANCH: Nom de la branche vers laquelle faire la Pull request, habituellement master/main ou develop.
 2. "Titre": Titre de la Pull request pour Github
 
+`git deploy preprod`
+
+Cette commande fait un checkout forcé de la dernière version du tag (environnement) donné en paramètre.
+
+**Paramètres**
+
+1. preprod: Nom du tag Git correspondant à l'environnement.
+
 `git feature feature-abc`
 
 Cette commande crée une nouvelle branche à partir de `develop`. Le checkout et le pull de `develop` sont faits automatiquement avant la création de la nouvelle branche.
@@ -50,6 +58,12 @@ Cette commande crée une Pull request en une seule étape. Le push sera fait aus
 
 1. BRANCH: Nom de la branche vers laquelle faire la Pull request, habituellement master/main ou develop.
 2. "Titre": Titre de la Pull request pour Github
+
+`git publish preprod`
+
+Cette commande crée une nouvelle version d'un tag (généralement le nom d'un environnement). La nouvelle version correspond au commit actuel du Git sur lequel la ligne de commande est exécutée.
+
+1. preprod: Nom du tag à mettre à jour
 
 `git refresh`
 
