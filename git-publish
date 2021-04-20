@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Updates the tag and pushes it to github
+ENV=$1;
+
+if [ "$ENV" = "" ]
+then
+echo "No environment provided as argument."
+fi
+
+git tag -a -f $ENV -m "$ENV";
+
+git push -f origin tags/$ENV;
